@@ -1,0 +1,12 @@
+<p>This is my guess: <%= cookies[:guess] %> </p>
+<p>This is my secret number: <%= cookies[:secret_number]%></p>
+<p>This is how many tries I have left: <%= 3-cookies[:count].to_i%></p>
+<p>This is my result: <%= @result %> </p>
+
+<form action = "try" method= "get">
+  <label> Enter a number : </label>
+  <input name = "guess" placeholder = "Your guess at the secret number" type="number" />
+  <input name = "submit" type = "submit" />
+  </form>
+
+<%= button_to "reset", "/reset", method: :get  %>
